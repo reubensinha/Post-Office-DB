@@ -1,0 +1,4 @@
+.venv
+.vscode
+Python/__pycache__
+./queries.sql

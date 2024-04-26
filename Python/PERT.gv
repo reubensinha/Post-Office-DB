@@ -1,0 +1,71 @@
+digraph g {
+	node [height=.1 shape=Mrecord]
+	rankdir=LR
+	node [shape=record]
+	"Plan GUI" [label="<f0>Plan GUI |{0|2|2}|<f2>All" color=blue fillcolor=grey93 style=filled]
+	"Make GUI" [label="<f0>Make GUI |{2|7|9}|<f2>TBD" color=blue fillcolor=grey93 style=filled]
+	"Mail DDL" [label="<f0>Mail DDL |{0|2|2}|<f2>Reuben" color=blue fillcolor=grey93 style=filled]
+	"MailBoxes DDL" [label="<f0>MailBoxes DDL |{2|1|3}|<f2>Reuben" color=blue fillcolor=grey93 style=filled]
+	"Post Office Branch DDL" [label="<f0>Post Office Branch DDL |{0|2|2}|<f2>Reuben" color=blue fillcolor=grey93 style=filled]
+	"Address DDL" [label="<f0>Address DDL |{0|2|2}|<f2>Reuben" color=blue fillcolor=grey93 style=filled]
+	"Employees DDL" [label="<f0>Employees DDL |{0|2|2}|<f2>Rhi Ann" color=blue fillcolor=grey93 style=filled]
+	"Manager DDL" [label="<f0>Manager DDL |{2|2|4}|<f2>Rhi Ann" color=blue fillcolor=grey93 style=filled]
+	"Driver DDL" [label="<f0>Driver DDL |{2|2|4}|<f2>Rhi Ann" color=blue fillcolor=grey93 style=filled]
+	"Clients DDL" [label="<f0>Clients DDL |{0|2|2}|<f2>Esther" color=blue fillcolor=grey93 style=filled]
+	"Payment DDL" [label="<f0>Payment DDL |{0|2|2}|<f2>Esther" color=blue fillcolor=grey93 style=filled]
+	"Truck DDL" [label="<f0>Truck DDL |{0|2|2}|<f2>Esther" color=blue fillcolor=grey93 style=filled]
+	"Mail DML" [label="<f0>Mail DML |{2|2|4}|<f2>Reuben" color=blue fillcolor=grey93 style=filled]
+	"MailBoxes DML" [label="<f0>MailBoxes DML |{4|1|5}|<f2>Reuben" color=blue fillcolor=grey93 style=filled]
+	"Post Office Branch DML" [label="<f0>Post Office Branch DML |{2|2|4}|<f2>Reuben" color=blue fillcolor=grey93 style=filled]
+	"Address DML" [label="<f0>Address DML |{2|2|4}|<f2>Reuben" color=blue fillcolor=grey93 style=filled]
+	"Employees DML" [label="<f0>Employees DML |{2|2|4}|<f2>Rhi Ann" color=blue fillcolor=grey93 style=filled]
+	"Manager DML" [label="<f0>Manager DML |{4|2|6}|<f2>Rhi Ann" color=blue fillcolor=grey93 style=filled]
+	"Driver DML" [label="<f0>Driver DML |{4|2|6}|<f2>Rhi Ann" color=blue fillcolor=grey93 style=filled]
+	"Clients DML" [label="<f0>Clients DML |{2|2|4}|<f2>Esther" color=blue fillcolor=grey93 style=filled]
+	"Payment DML" [label="<f0>Payment DML |{2|2|4}|<f2>Esther" color=blue fillcolor=grey93 style=filled]
+	"Truck DML" [label="<f0>Truck DML |{2|2|4}|<f2>Esther" color=blue fillcolor=grey93 style=filled]
+	"Brainstorm Queries" [label="<f0>Brainstorm Queries |{6|1|7}|<f2>All" color=blue fillcolor=grey93 style=filled]
+	"Implement Queries" [label="<f0>Implement Queries |{7|7|14}|<f2>TBD" color=blue fillcolor=grey93 style=filled]
+	"Integrate GUI/SQL" [label="<f0>Integrate GUI/SQL |{14|7|21}|<f2>TBD" color=blue fillcolor=grey93 style=filled]
+	"Optimize/Bug Fix" [label="<f0>Optimize/Bug Fix |{21|4|25}|<f2>All" color=blue fillcolor=grey93 style=filled]
+	START -> "Plan GUI"
+	"Plan GUI" -> "Make GUI"
+	START -> "Mail DDL"
+	"Mail DDL" -> "MailBoxes DDL"
+	START -> "Post Office Branch DDL"
+	START -> "Address DDL"
+	START -> "Employees DDL"
+	"Employees DDL" -> "Manager DDL"
+	"Employees DDL" -> "Driver DDL"
+	START -> "Clients DDL"
+	START -> "Payment DDL"
+	START -> "Truck DDL"
+	"Mail DDL" -> "Mail DML"
+	"Mail DML" -> "MailBoxes DML"
+	"MailBoxes DDL" -> "MailBoxes DML"
+	"Post Office Branch DDL" -> "Post Office Branch DML"
+	"Address DDL" -> "Address DML"
+	"Employees DDL" -> "Employees DML"
+	"Manager DDL" -> "Manager DML"
+	"Employees DML" -> "Manager DML"
+	"Driver DDL" -> "Driver DML"
+	"Employees DML" -> "Driver DML"
+	"Clients DDL" -> "Clients DML"
+	"Payment DDL" -> "Payment DML"
+	"Truck DDL" -> "Truck DML"
+	"Mail DML" -> "Brainstorm Queries"
+	"MailBoxes DML" -> "Brainstorm Queries"
+	"Post Office Branch DML" -> "Brainstorm Queries"
+	"Address DML" -> "Brainstorm Queries"
+	"Employees DML" -> "Brainstorm Queries"
+	"Manager DML" -> "Brainstorm Queries"
+	"Driver DML" -> "Brainstorm Queries"
+	"Clients DML" -> "Brainstorm Queries"
+	"Payment DML" -> "Brainstorm Queries"
+	"Truck DML" -> "Brainstorm Queries"
+	"Brainstorm Queries" -> "Implement Queries"
+	"Implement Queries" -> "Integrate GUI/SQL"
+	"Make GUI" -> "Integrate GUI/SQL"
+	"Integrate GUI/SQL" -> "Optimize/Bug Fix"
+	"Optimize/Bug Fix" -> FINISH
+}

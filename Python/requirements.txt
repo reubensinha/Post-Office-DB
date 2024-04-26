@@ -1,0 +1,4 @@
+graphviz==0.20.3
+pandas==2.2.1
+pertchart==0.5.1
+plotly==5.20.0
